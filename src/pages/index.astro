@@ -1,43 +1,23 @@
 ---
-import { Picture } from "astro:assets";
-import imageacceuil from "../../assets/img/totorro acceuil.webp";
+import { Image } from "astro:assets";
+import Imageacceuil from "../../src/assets/img/image 1.png";
 import { pb } from "../js/backend.js";
-const {
-  record,
-  field = "imgUrl",
-  alt,
-  classPicture,
-  classImg,
-  thumb = "1024x1024",
-} = Astro.props;
-
-const imageUrl = record?.[field]
-  ? pb.files.getURL(record, record[field], { thumb })
-  : null;
 ---
 
 <head>
   <meta charset="UTF-8" />
 </head>
-<section
-  class="relative w-full h-screen bg-green-900 text-white flex items-center justify-center"
->
-  <div
-    class="absolute inset-0 bg-cover bg-center opacity-40"
-    style="background-image: url('/images/eco-cinema-banner.jpg');"
-  >
-  </div>
-  <div class="relative text-center max-w-3xl px-6">
+  <div class="text-center max-w-3xl px-6">
     <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
-    <imageacceuil />
   </div>
+  <div class="w-full h-full">
+<Image src={Imageacceuil} alt="Totoro" /></div>
   <p class="mt-4 text-lg md:text-xl">
     Plongez dans l'univers captivant de l'animation japonaise et découvrez un
     monde riche en créativité, en émotions et en imagination. Que vous soyez un
     passionné de mangas, un adepte des animes, ou simplement curieux de
     découvrir cette culture fascinante, ce festival est fait pour vous !
   </p>
-
   <p class="text-4xl md:text-6xl font-bold">
     <strong>Du 11 au 13 juillet 2025</strong>
   </p>
@@ -53,4 +33,3 @@ const imageUrl = record?.[field]
   <p class="text-4xl md:text-6xl font-bold">
     <strong>Nos partenaires</strong>
   </p>
-</section>
