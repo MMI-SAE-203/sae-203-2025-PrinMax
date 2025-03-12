@@ -1,6 +1,7 @@
 ---
 import { Picture } from "astro:assets";
-// import { pb } from "../../backend/pb.ts";
+import imageacceuil from "../../assets/img/totorro acceuil.webp";
+import { pb } from "../js/backend.js";
 const {
   record,
   field = "imgUrl",
@@ -28,25 +29,14 @@ const imageUrl = record?.[field]
   </div>
   <div class="relative text-center max-w-3xl px-6">
     <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
-    {
-      imageUrl && (
-        <Picture
-          pictureAttributes={{ class: classPicture }}
-          class={classImg}
-          inferSize={true}
-          formats={["avif", "webp"]}
-          alt={alt || "Image"}
-          src={imageUrl}
-        />
-      )
-    }  
+    <imageacceuil />
   </div>
-    <p class="mt-4 text-lg md:text-xl">
-      Plongez dans l'univers captivant de l'animation japonaise et découvrez un
-      monde riche en créativité, en émotions et en imagination. Que vous soyez
-      un passionné de mangas, un adepte des animes, ou simplement curieux de
-      découvrir cette culture fascinante, ce festival est fait pour vous !
-    </p>
+  <p class="mt-4 text-lg md:text-xl">
+    Plongez dans l'univers captivant de l'animation japonaise et découvrez un
+    monde riche en créativité, en émotions et en imagination. Que vous soyez un
+    passionné de mangas, un adepte des animes, ou simplement curieux de
+    découvrir cette culture fascinante, ce festival est fait pour vous !
+  </p>
 
   <p class="text-4xl md:text-6xl font-bold">
     <strong>Du 11 au 13 juillet 2025</strong>
