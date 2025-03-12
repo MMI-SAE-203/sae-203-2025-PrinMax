@@ -1,0 +1,55 @@
+---
+import { Picture } from "astro:assets";
+// import { pb } from "../../backend/pb.ts";
+const {
+  record,
+  field = "imgUrl",
+  alt,
+  classPicture,
+  classImg,
+  thumb = "1024x1024",
+} = Astro.props;
+
+const imageUrl = record?.[field]
+  ? pb.files.getURL(record, record[field], { thumb })
+  : null;
+---
+
+<head>
+  <meta charset="UTF-8" />
+</head>
+<section
+  class="relative w-full h-screen bg-green-900 text-white flex items-center justify-center"
+>
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-40"
+    style="background-image: url('/images/eco-cinema-banner.jpg');"
+  >
+  </div>
+  <div class="relative text-center max-w-3xl px-6">
+    <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
+    <p class="text-4xl md:text-6xl font-bold">
+      <strong>Contact</strong>
+    </p>
+    <div>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>Nom:</strong>
+      </p>
+    </div>
+    <div>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>Prénom:</strong>
+      </p>
+    </div>
+    <div>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>Mail:</strong>
+      </p>
+    </div>
+    <div>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>Message:</strong>
+      </p>
+    </div>
+  </div>
+</section>

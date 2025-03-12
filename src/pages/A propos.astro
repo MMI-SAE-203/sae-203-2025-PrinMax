@@ -1,0 +1,75 @@
+---
+import { Picture } from "astro:assets";
+// import { pb } from "../../backend/pb.ts";
+const {
+  record,
+  field = "imgUrl",
+  alt,
+  classPicture,
+  classImg,
+  thumb = "1024x1024",
+} = Astro.props;
+
+const imageUrl = record?.[field]
+  ? pb.files.getURL(record, record[field], { thumb })
+  : null;
+---
+
+<head>
+  <meta charset="UTF-8" />
+</head>
+<section
+  class="relative w-full h-screen bg-green-900 text-white flex items-center justify-center"
+>
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-40"
+    style="background-image: url('/images/eco-cinema-banner.jpg');"
+  >
+  </div>
+  <div class="relative text-center max-w-3xl px-6">
+    <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
+    {
+      imageUrl && (
+        <Picture
+          pictureAttributes={{ class: classPicture }}
+          class={classImg}
+          inferSize={true}
+          formats={["avif", "webp"]}
+          alt={alt || "Image"}
+          src={imageUrl}
+        />
+      )
+    }
+  </div>
+  <p class="text-4xl md:text-6xl font-bold">
+    <strong>A propos</strong>
+  </p>
+  <p class="mt-4 text-lg md:text-xl">
+    Festival Animania 2025 : Plongez dans l'univers enchanté du Studio Ghibli à
+    Belfort ! Du 11 au 13 juillet 2025, la ville de Belfort accueillera une
+    nouvelle édition du Festival Animania, une célébration unique dédiée à
+    l'animation japonaise. Cette année, l'événement mettra à l'honneur les films
+    du légendaire Studio Ghibli, véritable référence mondiale en matière de
+    cinéma d'animation.
+  </p>
+  <p class="text-4xl md:text-6xl font-bold">
+    <strong>Un hommage au génie de Miyazaki et Takahata</strong>
+  </p>
+  <p class="mt-4 text-lg md:text-xl">
+    Durant trois jours, les spectateurs auront l'occasion de (re)découvrir les
+    chefs-d'œuvre intemporels des maîtres Hayao Miyazaki et Isao Takahata,
+    cofondateurs du Studio Ghibli. Des films cultes comme Le Voyage de Chihiro,
+    Mon Voisin Totoro ou encore, Princesse Mononoké seront projetés au Parc des
+    expositions de Belfort, l’AtraXion, permettant à tous de s'immerger dans ces
+    univers magiques, empreints de poésie et de sensibilités écologiques.
+  </p>
+  <p class="text-4xl md:text-6xl font-bold">
+    <strong>Activités immersives et exclusives</strong>
+  </p>
+  <p class="mt-4 text-lg md:text-xl">
+    Le festival ne se limitera pas aux projections ! Animania propose une
+    véritable immersion dans le monde Ghibli avec : Des quiz sur l’animation
+    japonaise, Ateliers sur le thème de l’animation japonaise et des Karaoké sur
+    l’animation japonaise.
+  </p>
+</section>

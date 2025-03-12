@@ -1,0 +1,100 @@
+---
+import { Picture } from "astro:assets";
+// import { pb } from "../../backend/pb.ts";
+const {
+  record,
+  field = "imgUrl",
+  alt,
+  classPicture,
+  classImg,
+  thumb = "1024x1024",
+} = Astro.props;
+
+const imageUrl = record?.[field]
+  ? pb.files.getURL(record, record[field], { thumb })
+  : null;
+---
+
+<head>
+  <meta charset="UTF-8" />
+</head>
+<section
+  class="relative w-full h-screen bg-green-900 text-white flex items-center justify-center"
+>
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-40"
+    style="background-image: url('/images/eco-cinema-banner.jpg');"
+  >
+  </div>
+  <div class="relative text-center max-w-3xl px-6">
+    <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
+    <p class="text-4xl md:text-6xl font-bold">
+      <strong>Planning</strong>
+    </p>
+    <div></div>
+    <p class="text-4xl md:text-6xl font-bold">
+      <strong>Date</strong>
+    </p>
+    <p class="mt-4 text-lg md:text-xl">
+      Le festival de Films d’animation japonais, Animania, se déroulera les 11,
+      12 et 13 juillet 2025.
+    </p>
+  </div>
+  <div>
+    <p class="text-4xl md:text-6xl font-bold">
+      <strong>Programme</strong>
+    </p>
+    <p class="text-4xl md:text-6xl font-bold">
+      <strong>11 et 12 juillet 2025</strong>
+    </p>
+    <p class="mt-4 text-lg md:text-xl">
+      <ul>
+        <li>
+          <strong>9h - 11h :</strong> Projection de films d’animation japonaise
+        </li>
+        <li><strong>11h - 11h30 :</strong> quiz sur l’animation japonaise</li>
+        <li>Ouverture de la cafeteria à <strong>11h30</strong></li>
+        <li>
+          <strong>13h - 15h :</strong> animations sur le thème de l’animation japonaise
+        </li>
+        <li>
+          <strong>15h - 17h :</strong> Projection de films d’animation japonaise
+        </li>
+        <li>
+          <strong>17h - 18h :</strong> karaoké sur le thème de l’animation japonaise
+        </li>
+      </ul>
+    </p>
+  </div>
+  <div>
+    <p class="text-4xl md:text-6xl font-bold">
+      <strong>13 juillet 2025</strong>
+    </p>
+    <ul>
+      <li>
+        <strong>9h - 11h :</strong> Projection de films d’animation japonaise
+      </li>
+      <li><strong>11h - 11h30 :</strong> quiz sur l’animation japonaise</li>
+      <li>Ouverture de la cafeteria à <strong>11h30</strong></li>
+      <li>
+        <strong>13h - 15h :</strong> animations sur le thème de l’animation japonaise
+      </li>
+      <li>
+        <strong>15h - 17h :</strong> Projection de films d’animation japonaise
+      </li>
+      <li>
+        <strong>17h - 18h :</strong> karaoké sur le thème de l’animation japonaise
+      </li>
+    </ul>
+  </div>
+  <p class="text-4xl md:text-6xl font-bold">
+    <strong>Liste des projections</strong>
+  </p>
+  <p class="mt-4 text-lg md:text-xl">
+    Vous pouvez voir ci dessous la liste des films qui seront projetés lors du
+    festival.
+  </p>
+  <p class="text-4xl md:text-6xl font-bold">
+    <strong>Télécharger programme</strong>
+  </p>
+</section>
