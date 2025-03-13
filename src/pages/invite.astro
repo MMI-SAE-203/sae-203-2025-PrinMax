@@ -1,6 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import { pb } from "../js/backend.js";
+import Imageinvite1 from "../../src/assets/img/image 21.png";
+import Imageinvite2 from "../../src/assets/img/image 22.png";
+import Imageinvite3 from "../../src/assets/img/image 23.png";
+import Imageinvite4 from "../../src/assets/img/image 24.png";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -16,11 +20,9 @@ import Layout from "../layouts/Layout.astro";
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-white p-4 shadow-lg rounded-lg text-center">
-          <img
-            src="/images/michel_ocelot.jpg"
-            alt="Michel Ocelot"
-            class="w-32 h-32 mx-auto rounded-full mb-4"
-          />
+          <div class="w-full h-full">
+            <Image src={Imageinvite1} alt="Michel Ocelot" />
+          </div>
           <h3 class="text-lg font-semibold">Michel Ocelot</h3>
           <p class="text-gray-600">
             Réalisateur connu pour Kirikou et la sorcière et Azur et Asmar
@@ -28,11 +30,9 @@ import Layout from "../layouts/Layout.astro";
         </div>
 
         <div class="bg-white p-4 shadow-lg rounded-lg text-center">
-          <img
-            src="/images/sylvain_chomet.jpg"
-            alt="Sylvain Chomet"
-            class="w-32 h-32 mx-auto rounded-full mb-4"
-          />
+          <div class="w-full h-full">
+            <Image src={Imageinvite2} alt="Sylvain Chomet" />
+          </div>
           <h3 class="text-lg font-semibold">Sylvain Chomet</h3>
           <p class="text-gray-600">
             Réalisateur de Les Triplettes de Belleville et L'Illusionniste
@@ -40,11 +40,9 @@ import Layout from "../layouts/Layout.astro";
         </div>
 
         <div class="bg-white p-4 shadow-lg rounded-lg text-center">
-          <img
-            src="/images/dominique_frot.jpg"
-            alt="Dominique Frot"
-            class="w-32 h-32 mx-auto rounded-full mb-4"
-          />
+          <div class="w-full h-full">
+            <Image src={Imageinvite3} alt="Dominique Frot" />
+          </div>
           <h3 class="text-lg font-semibold">Dominique Frot</h3>
           <p class="text-gray-600">
             Actrice ayant prêté sa voix à des personnages dans les versions
@@ -53,11 +51,9 @@ import Layout from "../layouts/Layout.astro";
         </div>
 
         <div class="bg-white p-4 shadow-lg rounded-lg text-center">
-          <img
-            src="/images/jean_reno.jpg"
-            alt="Jean Reno"
-            class="w-32 h-32 mx-auto rounded-full mb-4"
-          />
+          <div class="w-full h-full">
+            <Image src={Imageinvite4} alt="Jean Reno" />
+          </div>
           <h3 class="text-lg font-semibold">Jean Reno</h3>
           <p class="text-gray-600">
             Voix française du personnage Porco Rosso dans le film éponyme
