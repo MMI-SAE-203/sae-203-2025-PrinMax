@@ -1,6 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import Imageacceuil from "../../src/assets/img/image 1.png";
+import Imagebelfort from "../../src/assets/img/belfort.png";
+import Imageufc from "../../src/assets/img/ufc.png";
+import Imagepass from "../../src/assets/img/pass.png";
+import Imagecrous from "../../src/assets/img/crous.png";
+import Imagetgv from "../../src/assets/img/tgv.png";
 import { pb } from "../js/backend.js";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -9,31 +14,48 @@ import Layout from "../layouts/Layout.astro";
   <meta charset="UTF-8" />
 </head>
 <body>
-<Layout>
-  <div class="text-center max-w-3xl px-6">
-    <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
-  </div>
-  <div class="w-full h-full">
-  <Image src={Imageacceuil} alt="Totoro" /></div>
-  <p class="mt-4 text-lg md:text-xl">
-    Plongez dans l'univers captivant de l'animation japonaise et découvrez un
-    monde riche en créativité, en émotions et en imagination. Que vous soyez un
-    passionné de mangas, un adepte des animes, ou simplement curieux de
-    découvrir cette culture fascinante, ce festival est fait pour vous !
-  </p>
-  <p class="text-4xl md:text-6xl font-bold">
-    <strong>Du 11 au 13 juillet 2025</strong>
-  </p>
-  <p class="text-4xl md:text-6xl font-bold">
-    <strong>Le studio Ghibli</strong>
-  </p>
-  <p class="mt-4 text-lg md:text-xl">
-    Le Studio Ghibli est un célèbre studio d'animation japonais, fondé par Hayao
-    Miyazaki et Isao Takahata en 1985. Connu pour ses chefs-d'œuvre tels que Le
-    Voyage de Chihiro et Mon Voisin Totoro, il se distingue par ses récits
-    poétiques et ses animations soignées.
-  </p>
-  <p class="text-4xl md:text-6xl font-bold">
-    <strong>Nos partenaires</strong>
-  </p>
+  <Layout>
+    <div class="text-center max-w-3xl px-6">
+      <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
+    </div>
+    <div class="w-full h-full">
+      <Image src={Imageacceuil} alt="Totoro" />
+    </div>
+    <p class="mt-4 text-lg md:text-xl">
+      Plongez dans l'univers captivant de l'animation japonaise et découvrez un
+      monde riche en créativité, en émotions et en imagination. Que vous soyez
+      un passionné de mangas, un adepte des animes, ou simplement curieux de
+      découvrir cette culture fascinante, ce festival est fait pour vous !
+    </p>
+    <p class="text-4xl md:text-6xl font-bold">
+      <strong>Du 11 au 13 juillet 2025</strong>
+    </p>
+    <p class="text-4xl md:text-6xl font-bold">
+      <strong>Le studio Ghibli</strong>
+    </p>
+    <p class="mt-4 text-lg md:text-xl">
+      Le Studio Ghibli est un célèbre studio d'animation japonais, fondé par
+      Hayao Miyazaki et Isao Takahata en 1985. Connu pour ses chefs-d'œuvre tels
+      que Le Voyage de Chihiro et Mon Voisin Totoro, il se distingue par ses
+      récits poétiques et ses animations soignées.
+    </p>
+    <p class="text-4xl md:text-6xl font-bold">
+      <strong>Nos partenaires</strong>
+    </p>
+    <div class="w-full h-full">
+      <Image src={Imagebelfort} alt="belfort" />
+    </div>
+    <div class="w-full h-full">
+      <Image src={Imageufc} alt="ufc" />
+    </div>
+    <div class="w-full h-full">
+      <Image src={Imagepass} alt="pass" />
+    </div>
+    <div class="w-full h-full">
+      <Image src={Imagecrous} alt="crous" />
+    </div>
+    <div class="w-full h-full">
+      <Image src={Imagetgv} alt="tgv" />
+    </div>
+  </Layout>
 </body>
