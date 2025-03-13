@@ -5,6 +5,7 @@
 // import IconInstagram from '../assets/icones/icon_instagram.svg';
 // import IconTwitter from '../assets/icones/icon_twitter.svg';
 // import IconYoutube from '../assets/icones/icon_youtube.svg';
+import Logo from "../assets/icones/logo_white.svg";
 ---
 
 <footer class="bg-black text-white py-16 px-6 space-y-8 lg:space-y-0">
@@ -12,6 +13,11 @@
     <!-- Logo Animania -->
     <div class="lg:col-span-3 flex justify-center lg:justify-start">
       <!-- <LogoFooter/> -->
+    </div>
+    <div class="flex items-center">
+      <a href="/" aria-label="Accueil">
+        <img src={Logo.src} alt="Logo Animania" class="h-10 w-auto" />
+      </a>
     </div>
     <style lang="css">
       footer {
@@ -30,7 +36,7 @@
     </style>
     <!-- Menu -->
     <nav class="lg:col-span-3">
-      <h2 class="font-bold uppercase">Festival Animania</h3>
+      <h2 class="font-bold uppercase">Festival Animania</h2>
       <h3 class="font-bold uppercase">Menu</h3>
       <li>
         <a href="/planning" class="hover:text-gray-700">Planning</a>
@@ -56,37 +62,9 @@
         >
       </address>
     </div>
-
-    <!-- Réseaux sociaux -->
-    <div class="lg:col-span-3">
-      <h3 class="font-bold uppercase">Nous suivre</h3>
-      <ul class="flex space-x-4">
-        <li>
-          <a href="#" aria-label="Facebook" class="hover:opacity-75">
-            <!-- <IconFacebook/> -->
-          </a>
-        </li>
-        <li>
-          <a href="#" aria-label="Instagram" class="hover:opacity-75">
-            <!-- <IconInstagram/> -->
-          </a>
-        </li>
-        <li>
-          <a href="#" aria-label="Twitter" class="hover:opacity-75">
-            <!-- <IconTwitter/> -->
-          </a>
-        </li>
-        <li>
-          <a href="#" aria-label="YouTube" class="hover:opacity-75">
-            <!-- <IconYoutube/> -->
-          </a>
-        </li>
-      </ul>
+    <!-- Mention Grand Belfort -->
+    <div class="text-center mt-8">
+      <p class="font-bold uppercase">Grand Belfort</p>
     </div>
-  </div>
-
-  <!-- Mention Grand Belfort -->
-  <div class="text-center mt-8">
-    <p class="font-bold uppercase">Grand Belfort</p>
   </div>
 </footer>
