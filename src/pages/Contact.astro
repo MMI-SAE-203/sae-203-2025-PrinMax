@@ -9,36 +9,64 @@ import Layout from "../layouts/Layout.astro";
   <meta charset="UTF-8" />
 </head>
 <body>
-<Layout>
-  <div
-    class="absolute inset-0 bg-cover bg-center opacity-40"
-    style="background-image: url('/images/eco-cinema-banner.jpg');"
-  >
-  </div>
-  <div class="relative text-center max-w-3xl px-6">
-    <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
-    <p class="text-4xl md:text-6xl font-bold">
-      <strong>Contact</strong>
-    </p>
-    <div>
-      <p class="text-4xl md:text-6xl font-bold">
-        <strong>Nom:</strong>
-      </p>
+  <Layout>
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-40"
+      style="background-image: url('/images/eco-cinema-banner.jpg');"
+    >
     </div>
-    <div>
+    <div class="relative text-center max-w-3xl px-6">
+      <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
       <p class="text-4xl md:text-6xl font-bold">
-        <strong>Prénom:</strong>
+        <strong>Contact</strong>
       </p>
+      <form class="space-y-4 mt-6">
+        <div>
+          <label for="nom" class="block text-lg font-bold text-left">Nom:</label
+          >
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            class="w-full border border-gray-400 p-2 rounded"
+          />
+        </div>
+        <div>
+          <label for="prenom" class="block text-lg font-bold text-left"
+            >Prénom:</label
+          >
+          <input
+            type="text"
+            id="prenom"
+            name="prenom"
+            class="w-full border border-gray-400 p-2 rounded"
+          />
+        </div>
+        <div>
+          <label for="mail" class="block text-lg font-bold text-left"
+            >Mail:</label
+          >
+          <input
+            type="email"
+            id="mail"
+            name="mail"
+            class="w-full border border-gray-400 p-2 rounded"
+          />
+        </div>
+        <div>
+          <label for="message" class="block text-lg font-bold text-left"
+            >Message:</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            class="w-full border border-gray-400 p-2 rounded"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded"
+          >Envoyer</button
+        >
+      </form>
     </div>
-    <div>
-      <p class="text-4xl md:text-6xl font-bold">
-        <strong>Mail:</strong>
-      </p>
-    </div>
-    <div>
-      <p class="text-4xl md:text-6xl font-bold">
-        <strong>Message:</strong>
-      </p>
-    </div>
-  </div>
+  </Layout>
 </body>
