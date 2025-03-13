@@ -9,34 +9,56 @@ import Layout from "../layouts/Layout.astro";
   <meta charset="UTF-8" />
 </head>
 <body>
-<Layout>
-  <div
-    class="absolute inset-0 bg-cover bg-center opacity-40"
-    style="background-image: url('/images/eco-cinema-banner.jpg');"
-  >
-  </div>
-  <div class="relative text-center max-w-3xl px-6">
-    <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
-    <p class="text-4xl md:text-6xl font-bold">
-      <strong>Planning</strong>
-    </p>
-    <div></div>
-    <p class="text-4xl md:text-6xl font-bold">
-      <strong>Date</strong>
-    </p>
-    <p class="mt-4 text-lg md:text-xl">
-      Le festival de Films d’animation japonais, Animania, se déroulera les 11,
-      12 et 13 juillet 2025.
-    </p>
-  </div>
-  <div>
-    <p class="text-4xl md:text-6xl font-bold">
-      <strong>Programme</strong>
-    </p>
-    <p class="text-4xl md:text-6xl font-bold">
-      <strong>11 et 12 juillet 2025</strong>
-    </p>
-    <p class="mt-4 text-lg md:text-xl">
+  <Layout>
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-40"
+      style="background-image: url('/images/eco-cinema-banner.jpg');"
+    >
+    </div>
+    <div class="relative text-center max-w-3xl px-6">
+      <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>Planning</strong>
+      </p>
+      <div></div>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>Date</strong>
+      </p>
+      <p class="mt-4 text-lg md:text-xl">
+        Le festival de Films d’animation japonais, Animania, se déroulera les
+        11, 12 et 13 juillet 2025.
+      </p>
+    </div>
+    <div>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>Programme</strong>
+      </p>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>11 et 12 juillet 2025</strong>
+      </p>
+      <p class="mt-4 text-lg md:text-xl">
+        <ul>
+          <li>
+            <strong>9h - 11h :</strong> Projection de films d’animation japonaise
+          </li>
+          <li><strong>11h - 11h30 :</strong> quiz sur l’animation japonaise</li>
+          <li>Ouverture de la cafeteria à <strong>11h30</strong></li>
+          <li>
+            <strong>13h - 15h :</strong> animations sur le thème de l’animation japonaise
+          </li>
+          <li>
+            <strong>15h - 17h :</strong> Projection de films d’animation japonaise
+          </li>
+          <li>
+            <strong>17h - 18h :</strong> karaoké sur le thème de l’animation japonaise
+          </li>
+        </ul>
+      </p>
+    </div>
+    <div>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>13 juillet 2025</strong>
+      </p>
       <ul>
         <li>
           <strong>9h - 11h :</strong> Projection de films d’animation japonaise
@@ -53,37 +75,97 @@ import Layout from "../layouts/Layout.astro";
           <strong>17h - 18h :</strong> karaoké sur le thème de l’animation japonaise
         </li>
       </ul>
-    </p>
-  </div>
-  <div>
+    </div>
     <p class="text-4xl md:text-6xl font-bold">
-      <strong>13 juillet 2025</strong>
+      <strong>Liste des projections</strong>
     </p>
-    <ul>
-      <li>
-        <strong>9h - 11h :</strong> Projection de films d’animation japonaise
-      </li>
-      <li><strong>11h - 11h30 :</strong> quiz sur l’animation japonaise</li>
-      <li>Ouverture de la cafeteria à <strong>11h30</strong></li>
-      <li>
-        <strong>13h - 15h :</strong> animations sur le thème de l’animation japonaise
-      </li>
-      <li>
-        <strong>15h - 17h :</strong> Projection de films d’animation japonaise
-      </li>
-      <li>
-        <strong>17h - 18h :</strong> karaoké sur le thème de l’animation japonaise
-      </li>
-    </ul>
-  </div>
-  <p class="text-4xl md:text-6xl font-bold">
-    <strong>Liste des projections</strong>
-  </p>
-  <p class="mt-4 text-lg md:text-xl">
-    Vous pouvez voir ci dessous la liste des films qui seront projetés lors du
-    festival.
-  </p>
-  <p class="text-4xl md:text-6xl font-bold">
-    <strong>Télécharger programme</strong>
-  </p>
+    <p class="mt-4 text-lg md:text-xl">
+      Vous pouvez voir ci dessous la liste des films qui seront projetés lors du
+      festival.
+    </p>
+    <div
+      class="mt-6 flex flex-col md:flex-row items-center md:items-start gap-4"
+    >
+      <img
+        src="/mnt/data/image.png"
+        alt="Affiche de Mon Voisin Totoro"
+        class="w-64 h-auto"
+      />
+      <div class="text-lg md:text-xl">
+        <p class="font-bold">Mon voisin Totoro</p>
+        <p><strong>Date :</strong> 1988</p>
+        <p><strong>Genre :</strong> Cinéma de fantasy/Aventure</p>
+        <p><strong>Durée :</strong> 1h35</p>
+        <p><strong>Résumé :</strong></p>
+        <p>
+          Deux petites filles, Mei, quatre ans, et Satsuki, 10 ans, s'installent
+          dans une grande maison à la campagne avec leur père.
+        </p>
+      </div>
+      <div
+        class="mt-6 flex flex-col md:flex-row items-center md:items-start gap-4"
+      >
+        <img
+          src="/mnt/data/image.png"
+          alt="Affiche de Princesse Mononoké"
+          class="w-64 h-auto"
+        />
+        <div class="text-lg md:text-xl">
+          <p class="font-bold">Princesse Mononoké</p>
+          <p><strong>Date :</strong> 1997</p>
+          <p><strong>Genre :</strong> Cinéma de fantasy/Aventure</p>
+          <p><strong>Durée :</strong> 2h13</p>
+          <p><strong>Résumé :</strong></p>
+          <p>
+            Ashitaka, un jeune guerrier japonais, affronte un sanglier géant et
+            furieux qui attaque son village. Il tue la bête, mais se retrouve
+            atteint par un mal mystérieux.
+          </p>
+        </div>
+        <div
+          class="mt-6 flex flex-col md:flex-row items-center md:items-start gap-4"
+        >
+          <img
+            src="/mnt/data/image.png"
+            alt="Affiche de Le Voyage de Chihiro"
+            class="w-64 h-auto"
+          />
+          <div class="text-lg md:text-xl">
+            <p class="font-bold">Le Voyage de Chihiro</p>
+            <p><strong>Date :</strong> 2001</p>
+            <p><strong>Genre :</strong> Cinéma de fantasy/Aventure</p>
+            <p><strong>Durée :</strong> 2h05</p>
+            <p><strong>Résumé :</strong></p>
+            <p>
+              Au cours d'un voyage en voiture, la famille de Chihiro, 10 ans,
+              fait une halte dans un parc à thème qui semble abandonné.
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-6 flex flex-col md:flex-row items-center md:items-start gap-4"
+        >
+          <img
+            src="/mnt/data/image.png"
+            alt="Affiche de Le Château ambulant"
+            class="w-64 h-auto"
+          />
+          <div class="text-lg md:text-xl">
+            <p class="font-bold">Le Château ambulant</p>
+            <p><strong>Date :</strong> 2004</p>
+            <p><strong>Genre :</strong> Cinéma de fantasy/Aventure</p>
+            <p><strong>Durée :</strong> 1h59</p>
+            <p><strong>Résumé :</strong></p>
+            <p>
+              Sophie, une orpheline de 18 ans, travaille dur dans la boutique de
+              chapelier que lui a laissée son père.
+            </p>
+          </div>
+        </div>
+        <p class="text-4xl md:text-6xl font-bold">
+          <strong>Télécharger programme</strong>
+        </p>
+      </div>
+    </div>
+  </Layout>
 </body>
