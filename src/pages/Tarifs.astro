@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import Imageacceuil from "../../src/assets/img/image 1.png";
+import Imagemap from "../../src/assets/img/map_festival.png";
+import Imagetarifs from "../../src/assets/img/tarifs.png";
 import { pb } from "../js/backend.js";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -9,38 +10,47 @@ import Layout from "../layouts/Layout.astro";
   <meta charset="UTF-8" />
 </head>
 <body>
-<Layout>
-  <div
-    class="absolute inset-0 bg-cover bg-center opacity-40"
-    style="background-image: url('/images/eco-cinema-banner.jpg');"
-  >
-  </div>
-  <div class="relative text-center max-w-3xl px-6">
-    <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
-    <p class="text-4xl md:text-6xl font-bold">
-      <strong>Tarifs et informations</strong>
-    </p>
-    <div></div>
-    <p class="text-4xl md:text-6xl font-bold">
-      <strong>Informations</strong>
-    </p>
-    <p class="mt-4 text-lg md:text-xl">
-      Le festival de Films d’animation japonais, Animania, se déroulera au Parc
-      des expositions de Belfort, l’AtraXion, ZAC des, Rue des Prés, 90400
-      Andelnans les 11, 12 et 13 juillet 2025.
-    </p>
-  </div>
-  <div>
-    <p class="text-4xl md:text-6xl font-bold">
-      <strong>Voir sur la carte</strong>
-    </p>
-    <p class="text-4xl md:text-6xl font-bold">
-      <strong>Tarifs</strong>
-    </p>
-    <p class="mt-4 text-lg md:text-xl">
-      Billet standard : 95 € pour un pass de 3 jours.
-    </p>
-    <p class="mt-4 text-lg md:text-xl">Billet d’un jour : 40 € par jour.</p>
-    <p class="mt-4 text-lg md:text-xl">*Les billets ne sont pas remboursable</p>
-  </div>
-</body>
+  <Layout>
+    <div
+      class="absolute inset-0 bg-cover bg-center opacity-40"
+      style="background-image: url('/images/eco-cinema-banner.jpg');"
+    >
+    </div>
+    <div class="relative text-center max-w-3xl px-6">
+      <h1 class="text-4xl md:text-6xl font-bold">Animania</h1>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>Tarifs et informations</strong>
+      </p>
+      <div></div>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>Informations</strong>
+      </p>
+      <p class="mt-4 text-lg md:text-xl">
+        Le festival de Films d’animation japonais, Animania, se déroulera au
+        Parc des expositions de Belfort, l’AtraXion, ZAC des, Rue des Prés,
+        90400 Andelnans les 11, 12 et 13 juillet 2025.
+      </p>
+    </div>
+    <div>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>Voir sur la carte</strong>
+      </p>
+      <div class="w-full h-full">
+        <Image src={Imagemap} alt="map" />
+      </div>
+      <p class="text-4xl md:text-6xl font-bold">
+        <strong>Tarifs</strong>
+      </p>
+      <p class="mt-4 text-lg md:text-xl">
+        Billet standard : 95 € pour un pass de 3 jours.
+      </p>
+      <p class="mt-4 text-lg md:text-xl">Billet d’un jour : 40 € par jour.</p>
+      <div class="w-full h-full">
+        <Image src={Imagetarifs} alt="tarifs" />
+      </div>
+      <p class="mt-4 text-lg md:text-xl">
+        *Les billets ne sont pas remboursable
+      </p>
+    </div>
+  </Layout></body
+>
