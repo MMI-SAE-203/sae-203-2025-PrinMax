@@ -1,7 +1,7 @@
 import PocketBase from 'pocketbase';
 const pb = new PocketBase('http://127.0.0.1:8090');
 
-// 1) récupérer la liste de tous les films triés par date de projection
+// films triés par date de projection
 export async function getFilms() {
     const records = await pb.collection('Film').getFullList({
         sort: 'date_projection',
@@ -9,7 +9,7 @@ export async function getFilms() {
     return records;
 }
 
-// 2) récupérer la liste de toutes les activités triées par date
+// 2) activités triées par date
 export async function getActivites() {
     const records = await pb.collection('Activite').getFullList({
         sort: 'date_heure',
@@ -17,7 +17,7 @@ export async function getActivites() {
     return records;
 }
 
-// 3) récupérer la liste de tous les acteurs / réalisateurs triés par ordre alphabétique
+// 3) acteurs et réalisateurs triés par ordre alphabétique
 export async function getInvites() {
     const records = await pb.collection('Invite').getFullList({
         sort: 'nom',
@@ -25,25 +25,25 @@ export async function getInvites() {
     return records;
 }
 
-// 4) récupérer les infos d'un film par son ID
+// 4) infos d'un film par son ID
 export async function getFilmById(id) {
     const record = await pb.collection('Film').getOne(id);
     return record;
 }
 
-// 5) récupérer les infos d'une activité par son ID
+// 5) infos d'une activité par son ID
 export async function getActiviteById(id) {
     const record = await pb.collection('Activite').getOne(id);
     return record;
 }
 
-// 6) récupérer les infos d'un acteur / réalisateur par son ID
+// 6) infos d'un acteur et réalisateur par son ID
 export async function getInviteById(id) {
     const record = await pb.collection('Invite').getOne(id);
     return record;
 }
 
-// 7) récupérer toutes les activités d’un animateur donné par son ID
+// 7) activités d’un animateur donné par son ID
 export async function getActivitesByInviteId(id) {
     const records = await pb.collection('Activite').getFullList({
         filter: `anime_par = '${id}'`,
@@ -51,7 +51,7 @@ export async function getActivitesByInviteId(id) {
     return records;
 }
 
-// 8) récupérer toutes les activités d’un animateur donné par son nom
+// 8) activités d’un animateur donné par son nom
 export async function getActivitesByInviteNom(nom) {
     const invites = await pb.collection('Invite').getFullList({
         filter: `nom = '${nom}'`,
