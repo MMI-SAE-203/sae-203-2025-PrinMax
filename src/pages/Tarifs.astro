@@ -1,26 +1,15 @@
 ---
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
+import Imageacceuil from "../../src/assets/img/image 1.png";
 import { pb } from "../js/backend.js";
-const {
-  record,
-  field = "imgUrl",
-  alt,
-  classPicture,
-  classImg,
-  thumb = "1024x1024",
-} = Astro.props;
-
-const imageUrl = record?.[field]
-  ? pb.files.getURL(record, record[field], { thumb })
-  : null;
+import Layout from "../layouts/Layout.astro";
 ---
 
 <head>
   <meta charset="UTF-8" />
 </head>
-<section
-  class="relative w-full h-screen bg-green-900 text-white flex items-center justify-center"
->
+<body>
+<Layout>
   <div
     class="absolute inset-0 bg-cover bg-center opacity-40"
     style="background-image: url('/images/eco-cinema-banner.jpg');"
@@ -54,4 +43,4 @@ const imageUrl = record?.[field]
     <p class="mt-4 text-lg md:text-xl">Billet d’un jour : 40 € par jour.</p>
     <p class="mt-4 text-lg md:text-xl">*Les billets ne sont pas remboursable</p>
   </div>
-</section>
+</body>
