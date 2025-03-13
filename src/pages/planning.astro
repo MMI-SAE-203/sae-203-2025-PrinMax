@@ -1,6 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import Imageacceuil from "../../src/assets/img/image 1.png";
+import Imagetotorro from "../../src/assets/img/image 11.png";
+import Imageprincesse from "../../src/assets/img/image 12.png";
+import Imagechihiro from "../../src/assets/img/image 13.png";
+import Imagechateau from "../../src/assets/img/image 14.png";
 import { pb } from "../js/backend.js";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -86,11 +90,9 @@ import Layout from "../layouts/Layout.astro";
     <div
       class="mt-6 flex flex-col md:flex-row items-center md:items-start gap-4"
     >
-      <img
-        src="/mnt/data/image.png"
-        alt="Affiche de Mon Voisin Totoro"
-        class="w-64 h-auto"
-      />
+      <div class="w-full h-full">
+        <Image src={Imagetotorro} alt="affiche totorro" />
+      </div>
       <div class="text-lg md:text-xl">
         <p class="font-bold">Mon voisin Totoro</p>
         <p><strong>Date :</strong> 1988</p>
@@ -105,11 +107,9 @@ import Layout from "../layouts/Layout.astro";
       <div
         class="mt-6 flex flex-col md:flex-row items-center md:items-start gap-4"
       >
-        <img
-          src="/mnt/data/image.png"
-          alt="Affiche de Princesse Mononoké"
-          class="w-64 h-auto"
-        />
+        <div class="w-full h-full">
+          <Image src={Imageprincesse} alt="affiche princesse Mononoké" />
+        </div>
         <div class="text-lg md:text-xl">
           <p class="font-bold">Princesse Mononoké</p>
           <p><strong>Date :</strong> 1997</p>
@@ -125,11 +125,9 @@ import Layout from "../layouts/Layout.astro";
         <div
           class="mt-6 flex flex-col md:flex-row items-center md:items-start gap-4"
         >
-          <img
-            src="/mnt/data/image.png"
-            alt="Affiche de Le Voyage de Chihiro"
-            class="w-64 h-auto"
-          />
+          <div class="w-full h-full">
+            <Image src={Imagechihiro} alt="affiche Chihiro" />
+          </div>
           <div class="text-lg md:text-xl">
             <p class="font-bold">Le Voyage de Chihiro</p>
             <p><strong>Date :</strong> 2001</p>
@@ -145,11 +143,9 @@ import Layout from "../layouts/Layout.astro";
         <div
           class="mt-6 flex flex-col md:flex-row items-center md:items-start gap-4"
         >
-          <img
-            src="/mnt/data/image.png"
-            alt="Affiche de Le Château ambulant"
-            class="w-64 h-auto"
-          />
+          <div class="w-full h-full">
+            <Image src={Imagechateau} alt="affiche Chateau" />
+          </div>
           <div class="text-lg md:text-xl">
             <p class="font-bold">Le Château ambulant</p>
             <p><strong>Date :</strong> 2004</p>
