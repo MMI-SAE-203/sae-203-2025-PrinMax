@@ -1,148 +1,37 @@
 ---
-import Logo from '../assets/icones/logo_animania.png';
+import Layout from "../layouts/Layout.astro";
+import Logo from "../assets/icones/logo_animania.svg";
 ---
 
 <header
-  class="flex items-center justify-between px-4 gap-8 border-b-2 border-b-indigo-100 h-20 bg-blue-900"
+  class="px-6 py-2 fixed z-10 w-full flex items-center justify-between transition-all duration-300 ease-in-out bg-blue-300 shadow-md"
+  id="header"
 >
-  <a href="/">
-  <Logo />
-  </a>
-  <h1 class="text-white text-center">Animania</h1>
-  <button
-    id="menu-btn"
-    class="group relative z-10 flex h-3 w-6 flex-col justify-between lg:hidden :block:ease :h-0.5:w-full :transform:rounded-full *:t"
-    aria-label="Menu"
-    aria-controls="menu"
-    aria-expanded="false"
-  >
-    <span
-      class="group-aria-expanded:translate-y-[5px] group-aria-expanded:rotate-45"
-    ></span>
-    <span
-      class="group-aria-expanded:translate-y-[-5px] group-aria-expanded:invisible"
-    ></span>
-    <span
-      class="group-aria-expanded:-translate-y-[5px] group-aria-expanded:-rotate-45"
-    ></span>
-  </button>
-  <nav
-    id="menu"
-    class="flex-1 px-6 py-12 flex justify-between mt-20 flex-col fixed z-10 inset-0 bg-[#345337] visible opacity-100 max-lg:aria-hidden:invis"
-    aria-hidden="true"
-  >
-    <ul class="flex flex-col gap-4 lg:flex-row"></ul>
-  </nav>
-</header>
-<div class="flex items-center">
-  <a href="/" aria-label="Accueil">
-    <!-- <Logo/> -->
-  </a>
-</div>
+  <div class="flex items-center">
+    <a href="/" aria-label="Accueil">
+      <img src={Logo} alt="Logo Animania" class="h-10 w-auto" />
+    </a>
+  </div>
 
-<div class="flex items-center gap-4 lg:flex-row-reverse">
-  <button aria-label="Recherche">
-    <!-- <SearchIcon :class="{ 'stroke-white lg:stroke-black': underLimit }" aria-hidden="true" /> -->
-  </button>
-
-  <button
-    class="relative z-10 flex h-5 w-8 flex-col justify-between *:h-[2px] *:w-full *:bg-white *:transition-all *:duration-300 *:ease lg:hidden"
-    id="menu-btn"
-    aria-label="Menu"
-    aria-controls="menu"
-  >
-    <div></div>
-    <div></div>
-    <div></div>
-  </button>
-
-  <nav
-    id="menu"
-    class="invisible fixed inset-0 bg-indigo text-2xl text-white opacity-0 transition-all duration-300 ease-in-out lg:visible lg:relative lg:flex lg:items-center lg:bg-transparent lg:text-sm lg:font-bold lg:uppercase lg:tracking-wide lg:text-black lg:opacity-100"
-    aria-hidden="true"
-  >
-    <ul class="mt-[25vh] mx-16 lg:m-0 lg:flex">
-      <li class="menu-item">
-        <a href="/planning" class="menu-link">Planning</a>
+  <nav class="flex items-center gap-4">
+    <ul class="flex space-x-4 text-lg font-semibold text-black">
+      <li>
+        <a href="/planning" class="hover:text-gray-700">Planning</a>
       </li>
-      <li class="menu-item">
-        <a href="/Tarifs" class="menu-link">Tarifs et informations</a>
+      <li>
+        <a href="/Tarifs" class="hover:text-gray-700">Tarifs et informations</a>
       </li>
-      <li class="menu-item">
-        <a href="/Contact" class="menu-link">Contact</a>
+      <li>
+        <a href="/Contact" class="hover:text-gray-700">Contact</a>
       </li>
-      <li class="menu-item">
-        <a href="/A propos" class="menu-link">A propos</a>
+      <li>
+        <a href="/A propos" class="hover:text-gray-700">À propos</a>
       </li>
-      <li class="menu-item">
-        <a
-          href="/inscription"
-          class="menu-link lg:bg-black lg:text-white lg:px-8">Invités</a
+      <li>
+        <a href="/invite" class="bg-black text-white px-4 py-2 rounded-md"
+          >Invité</a
         >
       </li>
     </ul>
   </nav>
-</div>
-
-<script>
-  const hamburger = document.querySelector("#menu-btn");
-  const menu = document.querySelector("#menu-principal");
-  const page = document.body;
-
-  // Vérifier si les éléments existent avant d'ajouter l'événement
-  if (hamburger && menu) {
-    hamburger.addEventListener("click", () => {
-      const isOpen = hamburger.ariaExpanded === "true";
-      const isClosed = !isOpen;
-      // Mise à jour des attributs ARIA pour accessibilité
-      hamburger.ariaExpanded = isClosed;
-      hamburger.classList.toggle("menu-btn--open", isClosed);
-      menu.ariaHidden = isOpen;
-      menu.classList.toggle("menu--open", isClosed);
-      page.classList.toggle("noscroll", isClosed);
-    });
-  } else {
-    console.warn(
-      "Hamburger menu elements not found. Please check your selectors."
-    );
-  }
-
-  /*------------------------------------*\
-    # MASQUER LE HEADER AU SCROLL
-  \*------------------------------------*/
-
-  const navBar = document.querySelector("#header");
-  let lastScrollY = window.scrollY; // Position précédente du défilement
-  let ticking = false; // Pour éviter trop de calculs inutiles
-  const offset = 205; // Distance avant de cacher/montrer la barre
-
-  function handleScroll() {
-    const currentScrollY = window.scrollY;
-
-    // Ajouter une classe quand on dépasse 205px
-    if (currentScrollY > offset) {
-      navBar.classList.add("header--bg");
-    } else {
-      navBar.classList.remove("header--bg");
-    }
-
-    if (currentScrollY > lastScrollY && currentScrollY > offset) {
-      // Vers le bas et dépassé l'offset
-      navBar.classList.add("header--hidden");
-    } else if (currentScrollY < lastScrollY || currentScrollY <= offset) {
-      // Vers le haut ou revenu en haut de la page
-      navBar.classList.remove("header--hidden");
-    }
-
-    lastScrollY = currentScrollY;
-    ticking = false; // Permet de relancer l'écoute
-  }
-
-  // Ajout de l'écouteur de défilement avec throttle
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      window.requestAnimationFrame(handleScroll);
-      ticking = true;
-    }
-  });
-</script>
+</header>

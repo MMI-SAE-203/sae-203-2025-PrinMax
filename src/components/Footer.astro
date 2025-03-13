@@ -1,4 +1,5 @@
 ---
+// Importation des icônes nécessaires
 // import LogoFooter from '../assets/icones/icon_logoFooter.svg';
 // import IconFacebook from '../assets/icones/icon_facebook.svg';
 // import IconInstagram from '../assets/icones/icon_instagram.svg';
@@ -6,54 +7,65 @@
 // import IconYoutube from '../assets/icones/icon_youtube.svg';
 ---
 
-<footer class="grille space-y-6 bg-gray-900 py-16 px-6 text-white lg:space-y-0">
-  <!-- <LogoFooter/> -->
-  
-  
-  <nav class="space-y-3 lg:col-span-3 lg:col-start-7">
-    <h3 class="font-bold font-sans uppercase">Menu</h3>
-    <ul>
-      <li><a href="/agenda">Agenda</a></li>
-      <li><a href="/contact">Contact et accès</a></li>
-    </ul>
-  </nav>
+<footer class="bg-black text-white py-16 px-6 space-y-8 lg:space-y-0">
+  <div class="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <!-- Logo Animania -->
+    <div class="lg:col-span-3 flex justify-center lg:justify-start">
+      <!-- <LogoFooter/> -->
+    </div>
 
-  <div class="space-y-3 lg:col-span-3 lg:col-start-10">
-    <h3 class="font-bold font-sans uppercase">Contact</h3>
-    <address>
-      1 rue Paul Koepfler<br />90000 Belfort<br />
-      <a href="tel:0384542727">03 84 54 27 27</a><br />
-      <a href="mailto:conservatoire@agglo-belfort.fr">conservatoire@agglo-belfort.fr</a>
-    </address>
+    <!-- Menu -->
+    <nav class="lg:col-span-3">
+      <h3 class="font-bold uppercase">Menu</h3>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline">Planning</a></li>
+        <li><a href="#" class="hover:underline">Tarifs et informations</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+        <li><a href="#" class="hover:underline">À propos</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contact -->
+    <div class="lg:col-span-3">
+      <h3 class="font-bold uppercase">Contact</h3>
+      <address class="not-italic">
+        Parc des expositions de Belfort<br />
+        <a href="mailto:animania@agglo-belfort.fr" class="hover:underline"
+          >Animania@agglo-belfort.fr</a
+        >
+      </address>
+    </div>
+
+    <!-- Réseaux sociaux -->
+    <div class="lg:col-span-3">
+      <h3 class="font-bold uppercase">Nous suivre</h3>
+      <ul class="flex space-x-4">
+        <li>
+          <a href="#" aria-label="Facebook" class="hover:opacity-75">
+            <!-- <IconFacebook/> -->
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Instagram" class="hover:opacity-75">
+            <!-- <IconInstagram/> -->
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Twitter" class="hover:opacity-75">
+            <!-- <IconTwitter/> -->
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="YouTube" class="hover:opacity-75">
+            <!-- <IconYoutube/> -->
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
-  <div class="lg:col-span-3 lg:col-start-7">
-
-  </div>
-
-  <div class="space-y-3 lg:col-span-3 lg:col-start-10">
-    <h3 class="font-bold font-sans uppercase">Nous suivre</h3>
-    <ul class="flex gap-4">
-      <li>
-        <a href="https://facebook.com" aria-label="facebook">
-          <!-- <IconFacebook/> -->
-        </a>
-      </li>
-      <li>
-        <a href="https://instagram.com" aria-label="instagram">
-          <!-- <IconInstagram/> -->
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com" aria-label="twitter">
-          <!-- <IconTwitter/> -->
-        </a>
-      </li>
-      <li>
-        <a href="https://youtube.com" aria-label="youtube">
-          <!-- <IconYoutube/> -->
-        </a>
-      </li>
-    </ul>
+  <!-- Mention Grand Belfort -->
+  <div class="text-center mt-8">
+    <p class="font-bold uppercase">Grand Belfort</p>
   </div>
 </footer>
